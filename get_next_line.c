@@ -6,7 +6,7 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 15:17:03 by irhett            #+#    #+#             */
-/*   Updated: 2017/01/30 21:36:10 by irhett           ###   ########.fr       */
+/*   Updated: 2017/02/10 13:12:49 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char			*concat(char *str1, char *str2, int mall_1, int mall_2)
 	while (str2[len2])
 		len2++;
 	ans = (char*)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (!ans)
+		return (NULL);
 	len1 = -1;
 	len2 = -1;
 	while (str1[++len1])
