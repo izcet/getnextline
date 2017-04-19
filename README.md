@@ -14,7 +14,7 @@ Successive calls to the function getnextline() will allow a user to read in an e
 - only 1 static variable
 - no memory leaks
 - being able to handle multiple file descriptors
-update : added ability to use any character as a delimiter rather than `'\n'` through the DELIM macro
+- update : added ability to use any character as a delimiter rather than `'\n'` through the DELIM macro
 
 We were also allowed the option of including our "libft", a recoded library of several C standard library functions.
 I opted not to include mine, and instead coded the entire project by hand.
