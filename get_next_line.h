@@ -6,7 +6,7 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 15:17:12 by irhett            #+#    #+#             */
-/*   Updated: 2017/01/20 14:07:32 by irhett           ###   ########.fr       */
+/*   Updated: 2017/04/18 22:16:43 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 
 # define BUFF_SIZE 32
+
+# define DELIM '\n'
 
 int		get_next_line(const int fd, char **line);
 

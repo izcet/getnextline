@@ -6,7 +6,7 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 15:17:03 by irhett            #+#    #+#             */
-/*   Updated: 2017/02/10 13:12:49 by irhett           ###   ########.fr       */
+/*   Updated: 2017/04/18 22:16:30 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int				scan(char *str, int newline)
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (str[index] == '\n' && newline)
+		if (str[index] == DELIM && newline)
 			return (index);
 		index++;
 	}
@@ -65,17 +65,17 @@ int				copy(char *src, char **dst, char **stat, int fd)
 
 	ret = 0;
 	len = 0;
-	while ((src[len] != '\n') && (src[len] != '\0'))
+	while ((src[len] != DELIM) && (src[len] != '\0'))
 		len++;
 	dst[0] = (char*)malloc(sizeof(char) * len + 1);
 	index = 0;
-	while ((src[index] != '\n') && (src[index] != '\0'))
+	while ((src[index] != DELIM) && (src[index] != '\0'))
 	{
 		dst[0][index] = src[index];
 		index++;
 	}
 	dst[0][index] = '\0';
-	if (src[index] == '\n')
+	if (src[index] == DELIM)
 	{
 		ret = 1;
 		stat[fd] = concat(&(src[++index]), "", 0, 0);
