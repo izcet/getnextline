@@ -2,7 +2,7 @@
 The purpose of this project was to read from a given file descriptor until a newline was found.
 Successive calls to the function getnextline() will allow a user to read in an entire document, one line at a time.
 
-###Restrictions:
+### Restrictions:
 - no more than 5 functions in a file
 - no more than 1 file
 - file must conform to the "code norm" of the school (25 lines/function and 80 characters/line)
@@ -10,7 +10,7 @@ Successive calls to the function getnextline() will allow a user to read in an e
 - only 1 static variable
 - does not error (no double free, segfault, unexpected termination)
 
-###Bonus functionality:
+### Bonus functionality:
 - only 1 static variable
 - no memory leaks
 - being able to handle multiple file descriptors
